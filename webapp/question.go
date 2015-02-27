@@ -1,4 +1,4 @@
-package question
+package webapp
 
 import (
 	"fmt"
@@ -6,17 +6,9 @@ import (
 
 	"appengine"
 	"appengine/user"
-
-	"form"
 )
 
-func init() {
-	http.HandleFunc("/form", form.handler)
-	http.HandleFunc("/sign", form.sign)
-	http.HandleFunc("/question", handler)
-}
-
-func handler(w http.ResponseWriter, r *http.Request) {
+func Question(w http.ResponseWriter, r *http.Request) {
 	c := appengine.NewContext(r)
 	u := user.Current(c)
 	if u == nil {

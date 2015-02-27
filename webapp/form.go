@@ -1,4 +1,4 @@
-package form
+package webapp
 
 
 import (
@@ -8,7 +8,7 @@ import (
 )
 
 
-func handler(w http.ResponseWriter, r *http.Request) {
+func Form(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, guestbookForm)
 }
 
@@ -25,10 +25,10 @@ const guestbookForm = `
 `
 
 
-func sign(w http.ResponseWriter, r *http.Request) {
+func Sign(w http.ResponseWriter, r *http.Request) {
 	err := signTemplate.Execute(w, r.FormValue("content"))
 	if err != nil {
-		http.Error(w. err.Error(), http.StatusInternalServerError)
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 }
 
