@@ -1,0 +1,23 @@
+Queires
+==================================================
+
+Eventually we'll want to be able to answer some queries on the data generated.
+Here are some proposed queries.  The datastore should be set up in such a way
+as to easily answer these (or at least allow indices which do).
+
+1. All Users
+  i.   Top user results of most recent quiz
+  ii.  Top recent user results (1 week)
+  iii. Top user results of all time
+  iv.  Top user averages (min 10 quizzes)
+  v.   Top user response rate per category (min 10 questions)
+  vi.  Top user averages by graduating class (min 10 quizzes)
+3. Meta-analysis of Questions
+  i.   Most common categories
+  ii.  Response rate per category
+2. Per-user
+  i.   Personal average
+  ii.  Personal history
+  iii. Personal top categories
+  iv.  Personal rank overall
+  v.   Personal rank by class
